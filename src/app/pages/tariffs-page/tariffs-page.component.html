@@ -1,1 +1,16 @@
-<p>tariffs-page works!</p>
+<section>
+  <div class="header-container">
+    <h2>Tariffs list</h2>
+    <div class="filter-container">
+      <mat-form-field>
+        <mat-label>Filter By</mat-label>
+        <mat-select [(ngModel)]="selectedFilter" (selectionChange)="filterBy(selectedFilter)">
+          <mat-option value="downloadSpeed">Download Speed</mat-option>
+          <mat-option value="uploadSpeed">Upload Speed</mat-option>
+          <mat-option value="lowerPrice">Lower Price</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <app-tariff-item-card *ngFor="let item of tariffsData" [tariffItem]="item"></app-tariff-item-card>
+</section>

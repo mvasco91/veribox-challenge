@@ -1,0 +1,288 @@
+@import "../../../styles.scss";
+
+.card__container {
+  display: flex;
+  border: solid 1px $primary-color;
+  border-radius: 8px;
+  box-shadow: 6px 8px 11px -8px darken($primary-color, 15%);
+  margin-bottom: 20px;
+  .tariff-number h3,
+  .tariff-name {
+    font-size: 4vw;
+    font-weight: bold;
+  }
+  .tariff-name {
+    margin: 0 0.5rem 0 0.5rem;
+    width: 30%;
+  }
+  .speed {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    h4 {
+      display: none;
+    }
+    &__download,
+    &__upload {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: end;
+      :first-child {
+        display: flex;
+        align-items: flex-end;
+        line-height: 12px;
+        width: 100%;
+        mat-icon {
+          font-size: 3.2vw;
+          align-items: flex-end;
+        }
+      }
+      span {
+        text-align: end;
+      }
+    }
+  }
+  .price-container {
+    display: flex;
+    width: 45%;
+    justify-content: flex-end;
+    h2 {
+      margin-right: 1rem;
+      font-size: 5vw;
+    }
+    button {
+      background-color: $primary-color;
+      border: none;
+      border-radius: 5px;
+      color: $tertiary-color;
+      width: 6vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20vw;
+      mat-icon {
+        font-size: 5vw;
+      }
+      &:hover {
+        background-color: darken($primary-color, 15%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $phones) {
+  .card__container {
+    .speed {
+      &__upload {
+        display: none;
+      }
+    }
+    .benefits-container {
+      display: none;
+    }
+    .price-container {
+      button {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablets) and (min-width: 768px) {
+  .card__container {
+    .tariff-name,
+    .tariff-number {
+      font-size: 3vw;
+    }
+    .tariff-name {
+      width: 25%;
+    }
+    .speed {
+      align-items: center;
+      flex-direction: column;
+      width: 35%;
+      h4 {
+        display: none;
+      }
+      &__download,
+      &__upload {
+        align-items: center;
+        border: solid 1px $primary-color;
+        border-radius: 0 10px 10px 0;
+        display: flex;
+        font-size: 2.2vw;
+        flex-direction: row;
+        height: 4vw;
+        margin-bottom: 1rem;
+        width: 90%;
+        :first-child {
+          align-items: center;
+          height: 100%;
+          mat-icon {
+            align-items: center;
+            background: $primary-color;
+            border: solid 2px $primary-color;
+            color: white;
+            font-size: 2.5vw;
+            justify-content: center;
+            margin-right: 25px;
+            width: 8vw;
+          }
+        }
+        :nth-child(2) {
+          padding-right: 1rem;
+        }
+      }
+    }
+    .benefits-container {
+      display: none;
+    }
+    .price-container {
+      align-items: flex-end;
+      flex-direction: column;
+      width: 30%;
+      h2 {
+        font-size: 3.5vw;
+        margin-right: 0;
+      }
+      button {
+        width: 20vw;
+        height: 5vw;
+        span {
+          display: initial;
+          font-size: 2.8vw;
+          margin-right: 1rem;
+        }
+        mat-icon {
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktops) and (min-width: $tablets) {
+  .card__container{
+    padding: 0;
+    display: flex;
+    .tariff-number {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      background-color: $primary-color;
+      color: white;
+      width: 5%;
+      h3 {
+        font-size: 2vw;
+      }
+    }
+    .tariff-name {
+      width: 20%;
+      text-align: left;
+      font-size: 1.8vw;
+      margin: 1rem;
+    }
+    .speed {
+      align-items: flex-start;
+      flex-direction: column;
+      width: 25%;
+      margin: 1rem 0;
+      h4 {
+        display: initial;
+        margin: 0;
+      }
+      &__download,
+      &__upload {
+        align-items: center;
+        border: solid 1px $primary-color;
+        border-radius: 0 10px 10px 0;
+        display: flex;
+        font-size: 1.5vw;
+        flex-direction: row;
+        height: 2vw;
+        margin-bottom: .5rem;
+        width: 70%;
+        :first-child {
+          align-items: center;
+          height: 100%;
+          mat-icon {
+            align-items: center;
+            background: $primary-color;
+            border: solid 2px $primary-color;
+            color: white;
+            font-size: 1.5vw;
+            justify-content: center;
+            margin-right: 25px;
+            width: 5vw;
+          }
+        }
+        :nth-child(2) {
+          padding-right: 1rem;
+        }
+      }
+    }
+    .benefits-container {
+      display: initial;
+      width: 25%;
+      ul {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        list-style: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          margin: 0 0 1rem 0;
+          mat-icon {
+            align-items: center;
+            color: $secondary-color;
+            display: flex;
+            font-size: 1.6vw;
+            font-weight: 900;
+            margin-right: 0.5rem;
+            justify-content: center;
+          }
+          span {
+            font-size: 1.2vw;
+          }
+        }
+      }
+    }
+    .price-container {
+      align-items: flex-end;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 2rem;
+      width: 30%;
+      h2 {
+        font-size: 2.5vw;
+        margin-right: 0;
+      }
+      button {
+        height: 3vw;
+        width: 18vw;
+        span {
+          display: initial;
+          font-size: 1.8vw;
+          margin-right: 1rem;
+        }
+        mat-icon {
+          align-items: center;
+          display: flex;
+          font-size: 1.8vw;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+

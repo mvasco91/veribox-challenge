@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TariffsPageComponent } from './pages/tariffs-page/tariffs-page.component';
 import { TariffItemCardComponent } from './components/tariff-item-card/tariff-item-card.component';
-import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    MatIconModule,
+    MatCardModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

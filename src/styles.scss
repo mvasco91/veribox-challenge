@@ -2,6 +2,14 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+// Media queries resolutions
 $phones: 950px;
 $tablets: 1180px;
-$desktop: 1600px
+$desktops: 2600px;
+
+// Colors variables
+
+$primary-color: #fd8a02;
+$secondary-color: #64c973;
+$tertiary-color: white;
+
